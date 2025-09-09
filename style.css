@@ -1,0 +1,51 @@
+/* Basic page layout */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 2rem;
+  color: #222;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 1rem;
+}
+
+/* Card that holds the joke */
+#card {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 500px;
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  background: #fff8e1;
+  transition: opacity .3s ease;
+}
+
+/* Joke text styling */
+.joke-part {
+  margin: .5rem 0;
+  font-size: 1.1rem;
+}
+.punchline {
+  font-weight: bold;
+  color: #d84315;
+}
+
+/* Button */
+button {
+  padding: .6rem 1.2rem;
+  font-size: 1rem;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: #e68900; }
+
+/* Status line (loading / error) */
+#status {
+  margin-top: .5rem;
+  color: #777;
+}

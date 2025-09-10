@@ -1,4 +1,3 @@
-
 let cardEl = document.getElementById("card");
 let setupEl = document.getElementById("joke-part");
 let punchEl = document.getElementById("joke-part punchline");

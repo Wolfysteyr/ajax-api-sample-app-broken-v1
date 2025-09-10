@@ -1,14 +1,24 @@
-function loadJoke() {
+
+let cardEl = document.getElementById("card");
+let setupEl = document.getElementById("joke-part");
+let punchEl = document.getElementById("joke-part punchline");
+let btn = document.getElementById("newJokeBtn");
+
+btn.addEventListener('click', loadJoke);
+
+
+async function loadJoke() {
   cardEl.classList.add('hidden');
 
   try {
-    const response = fetch('https://official-joke-api.appspot.com/random_joke');
+    const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+    
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-    const data = response.json();
+    const data = await response.json();
 
-    setupEl.textContent   = data;
-    punchEl.textContent   = data;
+    setupEl.innerHTML  = data.setup;
+    punchEl.innerHTML  = data.punchline;
     cardEl.classList.remove('hidden');
 
   } catch (err) {
@@ -17,4 +27,3 @@ function loadJoke() {
   }
 }
 
-btn.addEventListener('submit', loadJoke());
